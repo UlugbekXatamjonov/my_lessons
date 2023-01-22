@@ -1,0 +1,53 @@
+Xalqarolashtirish va mahalliylashtirish sozlamalari
+
+Django xalqarolashtirish sozlamalarini taqdim etadi. Keling, eng ko'p ishlatiladiganlar bilan tanishaylik, masalan:
+USE_I18N - baynalmilallashtirish quyi tizimi yoqilganligini ko'rsatuvchi mantiqiy qiymat;
+USE_L10N - bu sana, vaqt va raqamni mahalliylashtirish yoqilganligini ko'rsatadigan mantiqiy qiymat. Agar u True bo'lsa, 
+Django sana, vaqt va raqamlar uchun mahalliy qiymatlardan foydalanadi. Defult holatda, u False;
+USE_TZ - bu vaqt mintaqasidagi sanalardan foydalanish kerakligini ko'rsatadigan mantiqiy qiymat. startproject buyrug'i
+bilan loyiha yaratganingizda, sozlama True bo'ladi;
+LANGUAGE_CODE - standart til loyiha kodi. Standart til formatini oʻrnating, masalan, Amerika ingliz tili uchun “en-us”, 
+ingliz tili uchun “engb” va hokazo. Bu sozlamaga rioya qilish uchun ISE_I18N “True”ga oʻrnatilishi kerak. Siz barcha kodlar 
+roʻyxatini http://www.i18nguy.com/unicode/language-identifiers.html saytida topishingiz mumkin;
+LANGUAGES - bu loyihada ishlatilishi mumkin bo'lgan tillarni o'z ichiga olgan kortej. Har bir til ikki elementdan iborat 
+kortej bilan belgilanadi: kod va nom. Django tomonidan qo'llab-quvvatlanadigan tillarning to'liq ro'yxatini django.conf.global_settings 
+sahifasida ko'rishingiz mumkin. Loyihani o'rnatish uchun
+ba'zi tillarni qo'llab-quvvatlash uchun LANGUAGES sozlamalarida ushbu ro'yxatdagi kortejlarni o'rnatishingiz kerak;
+LOCALE_PATHS - fayl tizimidagi Django loyiha uchun tarjimalarni topadigan yo'llar ro'yxati;
+TIME_ZONE - loyihaning vaqt mintaqasini belgilaydigan qator. Loyihani yaratishda startproject buyrug'i qiymatni "UTC" ga o'rnatadi. 
+Siz istalgan vaqt mintaqasini belgilashingiz mumkin, masalan, “Yevropa/Madrid”. Bu xalqarolashtirish va mahalliylashtirish 
+sozlamalarining faqat bir qismi. Toʻliq 
+Django tomonidan qo'llab-quvvatlanadigan ro'yxatni https://docs.djangoproject.com/en/2.0/ref/settings/#globalization-i18n-l10n 
+manzilida topish mumkin.
+
+
+Xalqarolashtirishni nazorat qilish buyruqlari
+
+Django-da tarjima fayllarini boshqarish uchun ikkita buyruq mavjud:
+makemessages - tarjima uchun belgilangan barcha satrlarni topish va mahalliy papkada tarjima .po fayllarini yaratish yoki yangilash 
+uchun bajariladi. Har bir til uchun bitta .po fayl yaratiladi;
+compilemessages - yaratilgan .po fayllarni tarjimalarni qo'llash uchun ishlaydigan loyihada ishlatiladigan .mo fayllariga aylantiradi.
+
+
+Python kodiga tarjimalarni qo'shish
+
+Python kodidagi satrlarni tarjima qilish uchun django.utils.translation modulidagi gettext() funksiyasi yordamida ularni tarjima
+qilinadigan deb belgilashingiz kerak. Bu funksiya iboraning tarjimasini topadi va qaytaradi. Ishlab chiquvchilar orasida ushbu 
+funktsiya uchun _ (pastki chiziq) qisqartmasidan foydalanish bo'yicha konventsiya mavjud.
+Toʻliq tarjima hujjatlarini https://docs.djangoproject.com/en/2.0/topics/i18n/translation/ sahifasida koʻrishingiz mumkin.
+
+
+"dangasa" tarjimasi
+
+Django tarjimalar uchun funksiyalarning dangasa versiyalarini taqdim etadi. Bunday funksiyalarning nomlari _lazy() bilan tugaydi.
+Ulardan foydalanganda string tarjimasi funksiya chaqirilganda emas, balki haqiqatda kerak bo‘lganda amalga oshiriladi. 
+Lazy tarjimalar modullari import qilinganda bajariladigan fayllarda satrlar mavjud bo'lganda foydalidir.
+Agar gettext() oʻrniga gettext_lazy() dan foydalansangiz, satrlarning haqiqiy tarjimasi funksiya chaqirilgan vaqtda emas, 
+balki tarjima kerak boʻlganda (masalan, sahifani koʻrsatish uchun) bajariladi. Ushbu "dangasa" versiyalar Django tarjimasi 
+bilan bog'liq barcha funktsiyalar uchun mavjud.
+
+
+Tarjimalarda ko‘plik
+
+Ko'plik tarjimalari uchun ngettext() va ngettext_lazy() dan foydalaning. Bu funktsiyalar ob'ektlar soniga qarab so'zlarni birlik 
+va ko'plik shaklida tarjima qilishni amalga oshiradi. Ushbu misol ngettext() ning imkoniyatlarini ko'rsatadi:

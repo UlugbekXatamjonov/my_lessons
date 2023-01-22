@@ -1,0 +1,19 @@
+"""
+Thame: Funkcions(Funksiyalar)
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

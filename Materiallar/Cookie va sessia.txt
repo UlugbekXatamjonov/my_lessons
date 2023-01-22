@@ -1,0 +1,28 @@
+Django loyihangiz uchun bir nechta seans sozlamalarini qo'llab-quvvatlaydi. 
+Ulardan eng muhimi SESSION_ENGINE. Bu seans ma'lumotlarini qanday saqlashni belgilash imkonini beradi. 
+Ular ma'lumotlar bazasiga django.contrib.sessions ilovasining Sessiya modelidagi ob'ektlar sifatida saqlanadi.
+Seans ma'lumotlarini saqlashning quyidagi usullari mavjud:
+
+ma'lumotlar bazasiga asoslangan - sessiya ma'lumotlari ma'lumotlar bazasida saqlanadi (bu usul sukut bo'yicha ishlatiladi);
+faylga asoslangan - ma'lumotlar fayl tizimida saqlanadi;
+keshga asoslangan - ma'lumotlar keshlash serverida saqlanadi. Siz uni settings.py faylining KESHLARI konfiguratsiyasi bilan sozlashingiz mumkin. 
+	Esda tutingki, keshga asoslangan seanslar eng tezkor usuldir;
+kesh va ma'lumotlar bazasi asosida - sessiya ma'lumotlari ma'lumotlar bazasiga yoziladi, 
+	lekin unga kirish uchun apellyatsiya birinchi navbatda keshga o'tadi va agar bu ma'lumot endi yo'q bo'lsa, ma'lumotlar bazasiga so'rov yuboriladi;
+cookie-fayllarga asoslangan - sessiya ma'lumotlari foydalanuvchi brauzeriga yuborilgan cookie-fayllarda saqlanadi.
+
+
+
+Seans ma'lumotlarini saqlash usulini o'rnatishdan tashqari, ularni quyidagi sozlamalar orqali boshqarishingiz mumkin:
+SESSION_COOKIE_AGE - Cookie-fayllarga asoslangan seans muddati soniyalarda. Standart qiymat 1209600 (2 hafta);
+SESSION_COOKIE_DOMAIN - cookie-fayllarga asoslangan seanslar uchun domen. Cookie-fayllarni buzish xavfini oldini olish uchun ushbu sozlamani saytingiz domeniga o‘rnating;
+SESSION_COOKIE_DOMAIN - cookie-fayllarga asoslangan seansni HTTP va HTTPS ulanishlari yoki faqat HTTPS orqali o'rnatish mumkinligini ko'rsatadigan mantiqiy qiymat;
+SESSION_EXPIRE_AT_BROWSER_CLOSE - brauzer yopilgandan keyin cookie-fayllarga asoslangan seansning ishlash muddati;
+SESSION_SAVE_EVERY_REQUEST - mantiqiy qiymat. Agar rost bo'lsa, sessiya har bir so'rov bo'yicha ma'lumotlar bazasiga saqlanadi. 
+Shu bilan birga, uning amal qilish muddati avtomatik ravishda yangilanadi.
+
+Seansning ishlash muddati
+Brauzer seansining ishlash muddatini SESSION_EXPIRE_AT_BROWSER_CLOSE sozlamasi bilan belgilashingiz mumkin. 
+Bu sukut bo'yicha False. Seans SESSION_COOKIE_AGE da belgilangan vaqt davomida saqlanadi. 
+Agar o'rnatsangiz SESSION_EXPIRE_AT_BROWSER_CLOSE=To‘g‘ri, foydalanuvchi brauzerni yopgach, sessiya tugaydi. 
+Bunday holda, Django SESSION_COOKIE_AGE da belgilangan ishlash muddatiga e'tibor bermaydi.
