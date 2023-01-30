@@ -1,19 +1,40 @@
 """
 Pythondan 1-imtihon savollari 
-Thames: streengs, numbers, if-else-elif, for, lists
-Tests       -> 17
-Next step   -> 10+
-Good result -> 15+
+Thames: streengs, numbers, for, lists, tuple, if-else-elif, boolen, operators
+Tests       -> 30   
+Next step   -> 22+
+Good result -> 28+
 
-KEYS = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 
-       A C B A D C C A C A  B  C  D  B  B 
+KEYS = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+       A C B A D C C A C A  B  C  D  B  B  A  C  D  B  A  D  B  C  A  B
        
-       16) print(ism +' '+ familya , yosh , "yoshda")
-       17) sonlar = range(9,45,2)
-           print(sonlar)
+26) print(ism +' '+ familya , yosh , "yoshda")
+
+27) sonlar = range(9,45,2)
+        # print(sonlar)
+ 
+28)
+tyil = int(input("Tug'ilgan yilingizni kiriting: "))
+yosh = 2023-tyil
+print(f"Siz {yosh} yoshda siz")
+
+29)
+ismlar = ["Ali", "Olim", "Hasan", "Husan", "Vali"]
+ismlar.remove("Ali")
+ismlar.remove("Olim")
+ismlar.append("Tolib")
+ismlar[1] = "Husan Hasanov"
+print(ismlar)
+
+30)
+sonlar = list(range(20,31))
+for son in sonlar:
+    print(f"{son} ning 4-darajasi {son**4} ga teng")
 """
 
 """
+<--  Savollar  -->
+
 1) O'zgaruvchining turini aniqlab beruvchi funskiya nomi ?
 A) type()
 B) str()
@@ -37,7 +58,6 @@ A) title()
 B) upper()
 C) capitalize()
 D) lower()
-
 
 5) lover() metodining vazifasi ?
 A) Matndagi 1-so'zning 1-harfini katta qilib chiqaradi
@@ -116,29 +136,81 @@ B) for
 C) elif
 D) in
 
-16) Quidagi kodagi hatolik(lar)ni aniqlang va kodni xatoliksiz to'g'ri yozing.
+16) replace() metodining vazifasi ?
+A) Bir belgini ikkinchisiga almashtirib berish
+B) elementni o'chirish
+C) ro'yhatdagi elementni boshqasi bilan almashtirish
+D) ro'yhatdan elementni sug'urish
+
+17) Matndagi bo'shliqlarni yo'q qilib beruvchi metod  nomi ?
+A) lstrip()
+B) rstrip()
+C) strip()
+D) len()
+
+18) O'nlik sonni yaxlidlab beruvchi metod nomi ?
+A) rount()
+B) math()
+C) sqrt()
+D) round()
+
+19) Ro'yhatni boshi va oxirini aylantirib beruvchi metod nomi ?
+A) sorted(reverse=True)
+B) reverse()
+C) sort(reverse=True)
+D) list()
+
+20) Agar ..... orqali elementni o'chirsak ,  element ro'yhatda bo'lsa o'chiriladi, 
+    agar u ro'yhatda bo'lmasa xatolik kelib chiqmaydi.
+A) discard()
+B) del
+C) discart()
+D) remove()
+
+21) Ikkita set ni qo'shib,  3-yangi set ni yararuvchi metod nomi ?
+A) list()
+B) set()
+C) update()
+D) union()
+
+22) bool() funksiyasining vazifasi ?
+A) Mantiqiy qiymat yaratadi
+B) Har qanday qiymatni baholashga imkon beradi va bizga True yoki False javobini qaytaradi
+C) Taqqoslash operatorlari
+D) Mantiqiy qiymat operatori
+
+23) Yaxlidlab bo'lish operatorini belgilang.
+A) /
+B) =/
+C) //
+D) /=
+
+24) Azolik operatori to'g'ri ko'rsatilgan javobni tanlang.
+A) in / not in
+B) or
+C) is / is not
+D) and
+
+25) Identifikatsiya operatorlari to'g'ri ko'rsatilgan javobni tanlang.
+A) in / in not
+B) is / is not
+C) in / not in
+D) and / or / not
+
+26) Quidagi kodagi hatolik(lar)ni aniqlang va kodni xatoliksiz to'g'ri yozing.
 ism = 'Abbos'
 familya = "Bahromov"
 yosh = 20
 print(ism +' '+ familya2 + yosh + "yoshda")
 
+27) sonlar deb nomlangan 9 dan 45 gacha toq sonlardan iborat sonli ro'yhat yarating(45 kirmaydi).
 
-17) sonlar deb nomlangan 9 dan 45 gacha toq sonlardan iborat sonli ro'yhat yarating(45 kirmaydi).
+28) Foydalanuvchidan uning tug'ilgan yilini kiritishini so'rab, unga yoshini hisoblab beruvchi 
+    dastur tuzing.
+
+29) Ismlar deb nomlangan ro'yhat(list) tuzing, unda 5 ta ism bo'lsin.
+    Keyin undan 2 ta isimni o'chirib tashlang, 1 ta qo'shing, va 1 ta ismning qiymatini o'zgartiring.
+
+30) 20 dan 30 gacha(30 ham) bo'lgan sonlarning to'rtinchi darajasini hisoblab konsulga chiqaradigan dastur tuzing.
 
 """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -34,21 +34,21 @@ Oila a'zolaringizning sevimli taomlari lug'atini tuzing. Lug'atda kamida 5 ta is
 # print(f"Onamning sevimli taomi {taom.title()}.")
 
 # taom= taomlar["ukam"]
-# print(f"Ukamning sevimli taomi {taom.title()}.")
+# print(f"Ukamning sevimli taomi {taomlar['ukam'].title()}.")
 
 
 """ 3 
 Python izohli lu'gati tuzing: Lug'atga shu kunga qadar o'rgangan 10 ta so'z(atamani) kiriting 
     (masalan integer, float, string, if, else va hokazo) va har birining qisqacha tarjimasini yozing.
 """
-# python_lugati ={
-#     "print":"konsulga yozilgan dasturni chiqarib berdi.",
-#     "if":"agar deb tarchima qilinadi va birinchi shartni bajaradi",
-#     "else":"yoki deb tarchima qilinadi va qolgan shartni bajaradi",
-#     "elif":"ikinchi va boshqa shartlarni bajaradi",
-#     ".title":"Bu metod berilgan so'zni birinchi harfini konsulga katta qilib berib chiqaradi.",
-#     ".upper":"Bu metod berilgan so'zni konsulga bacha harflarini katta qilib berib chiqaradi.",
-# }
+python_lugati ={
+    "print":"konsulga yozilgan dasturni chiqarib berdi.",
+    "if":"agar deb tarchima qilinadi va birinchi shartni bajaradi",
+    "else":"yoki deb tarchima qilinadi va qolgan shartni bajaradi",
+    "elif":"ikinchi va boshqa shartlarni bajaradi",
+    ".title":"Bu metod berilgan so'zni birinchi harfini konsulga katta qilib berib chiqaradi.",
+    ".upper":"Bu metod berilgan so'zni konsulga bacha harflarini katta qilib berib chiqaradi.",
+}
 # print(python_lugati["print"])
 
 """ 4 
@@ -68,7 +68,7 @@ Foydalanuvchidan biror so'z kiritishni so'rang va so'zning tarjimasini yuqoridag
 # if eng_uz != soz :
 #     print(eng_uz.get(soz, "Bunday so'z mavjud emas."))
 # else :
-#     print(eng_uz.title())
+#     print(f"{soz} - {eng_uz}")
     
 
 """ 6 
@@ -88,23 +88,23 @@ Python izohli lug'atini yarating va lug'atga kamida 10 ta so'z qo'shing. Lug'atd
 # }
 
 # for k , v in sorted(pyhton_izohli_lugati.items()) :
-#     print(f"{k.title()}-{v}")
+    # print(f"{k}-{v}")
 
 
 """ 7 
 Davlatlar va ularning poytaxtlari lug'atini tuzing. Avval lug'atdagi davlatlarni, keyin poytaxtlarni 
     alohida-alohida, alifbo ketma-ketligida konsolga chiqaring. 
 """
-# davlatlar = {
-#     "o'zbekiston":'toshkent',
-#     'aqsh':'washington d.c.',
-#     'rossiya':'moskva',
-#     'tojikiston':'dushanbe',
-#     "qirg'iziston":'bishkek',
-#     'qozog\'iston':'nursulton',
-#     'malayziya':'kuala-lumpur',
-#     'singapur':'sungapur',
-#     'italiya':'rim'}
+davlatlar = {
+    "o'zbekiston":'toshkent',
+    'aqsh':'washington d.c.',
+    'rossiya':'moskva',
+    'tojikiston':'dushanbe',
+    "qirg'iziston":'bishkek',
+    'qozog\'iston':'nursulton',
+    'malayziya':'kuala-lumpur',
+    'singapur':'sungapur',
+    'italiya':'rim'}
 
 # print('Dunyo davlatlari:')
 # for davlat in sorted(davlatlar):

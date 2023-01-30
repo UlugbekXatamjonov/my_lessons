@@ -7,13 +7,13 @@ Thame: Funkcions(Funksiyalar)
 """ 1)
     Foydalanuvchi ismi va yoshini so'rab, uning tug'ilgan yilini hisoblaydigan funksiya yozing.
 """
-def salom_ber() :
-    """" Foydalanuvchi tug'ilgan yilini hisolaydigan funksiya"""
-    ism = input("Ismingiz nima ?")
-    yosh = int(input(f"{ism.title()} yoshingiz nechida ?"))
-    print(f"Assalomu aleykum {ism.title()}. Siz {2023-yosh} da tug'ilgansiz.")
+# def salom_ber() :
+#     """" Foydalanuvchi tug'ilgan yilini hisolaydigan funksiya"""
+#     ism = input("Ismingiz nima ?")
+#     yosh = int(input(f"{ism.title()} yoshingiz nechida ?"))
+#     print(f"Assalomu aleykum {ism.title()}. Siz {2023-yosh} da tug'ilgansiz.")
 
-salom_ber()
+# salom_ber()
 
 
 """ 2)
@@ -35,14 +35,14 @@ salom_ber()
 
 """ 3)
     Foydalanuvchidan son olib, son juft yoki toqligini konsolga chiqaruvchi funksiya yozing.
-"""
+# """
 # def toq_juft() :
 #     """Sonni toq yoki juft ekanini aniqlaydigan funksia"""
 #     son = int(input("Istalgan butun sonni kiriting: "))
-#     if son%2 :
-#         print(f"{son} toq son")
+#     if son%2==0 :
+#         print(f"{son} juf son")
 #     else:
-#         print(f"{son} juft son")
+#         print(f"{son} toq son")
 
 # toq_juft()
 
@@ -52,7 +52,7 @@ salom_ber()
     Agar sonlar teng bo'lsa "Sonlar teng" degan xabarni chiqaring.
 """
 # def katta_kichik() :
-#     """Kiritilgan sonning eng kattasini o'rsatuvchi funksia """
+#     """Kiritilgan sonning eng kattasini ko'rsatuvchi funksia """
 #     son1 = int(input("1- sonni kiriting: "))
 #     son2 = int(input("2- sonni kiriting: "))
 #     if son1 > son2 :
@@ -71,7 +71,7 @@ salom_ber()
 #     """berilgan sonni 2 dan 10 gacha bo'lgan sonlarga qoldiqsiz bo'linishini tekshiruvchi funksia """
 #     son = int(input("Istalgan butun sonni kiriting: "))
 #     for n in range(2,11):
-#         if  not son%n :
+#         if  son%n==0 :
 #             print(f"{son} {n}ga qoldiqsiz bo'linadi")
 # bolinish()
 
@@ -86,7 +86,6 @@ salom_ber()
 # family("Aziz", "Aliyev", 23, "Dasturchi")
 # family("Bonu", "ALiyeva", 22, "Hamshira")
 # family("Otabek", "Aliyev", 45, "Muhandis")
-       
 # family("Olim", "dfsdf", 23, 'SFSF') 
        
 
@@ -95,10 +94,10 @@ salom_ber()
     yozing, 2- katetni o'zgarmas parameter sifatida bering.
 """
 # from math import sqrt
-# def tbu(k1, k2):
+# def tbu(k1, k2=5):
 #     g = round(sqrt(k1**2+k2**2),2)
 #     print(f"Katetlari {k1} va {k2} ga teng TBU ning gipotenuzasi taxminan {g} ga teng")
 # tbu(k2=6, k1=4)
 # tbu(6,5)
-# tbu(3,7)
+# tbu(3)
 

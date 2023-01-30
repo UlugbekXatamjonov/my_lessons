@@ -24,7 +24,7 @@ Tuple elementlari har qanday turdagi ma'lumotlarga ega bo'lishi mumkin:
 # ismlar.append("Aziz")
 # print(ismlar)
 
-# familyalar.append("Ismatov")
+# familyalar.append("Ismatov") # ishlamaydi
 # print(familyalar)
 
 """" list(), tuple() funksiyalari """
@@ -46,8 +46,8 @@ Tuple elementlari har qanday turdagi ma'lumotlarga ega bo'lishi mumkin:
 # print(type(meva))
 
 """ tuple ni o'chirish """
-# print(meva)
 # del meva
+# print(meva)
 # print(meva) # bu xatolik keltirib chiqaradi, chunki endi "meva" degan ro'yhat yo'q
 
 """ tuple larni qo'shish """
@@ -69,9 +69,10 @@ Set tartibsiz, shuning uchun elementlar qaysi tartibda bo'lishi aniq emas.
 # print(type(myset))
 
 """ set() funksiyasi """
-# name = ["ali", "vali", "olim"]
+# name = ("ali", "vali", "olim")
 # print(name)
 # print(type(name))
+
 # name = set(name)
 # print(name)
 # print(type(name))
@@ -85,7 +86,7 @@ Set tartibsiz, shuning uchun elementlar qaysi tartibda bo'lishi aniq emas.
 # name.remove("ali") # Agar o'chiriladigan element mavjud bo'lmasa remove() xato beradi
 # print(name)
 
-# name.discard("ali") # descard() esa xato bermaydi
+# name.discard("aziz") # descard() esa xato bermaydi
 # print(name)
 
 """ del va .clear()"""
@@ -112,7 +113,7 @@ Set tartibsiz, shuning uchun elementlar qaysi tartibda bo'lishi aniq emas.
 <--- Vazifa --->
 1) oila deb nomlangan bo'sh o'zgarmas ro'yhatlarga(tuple) o'z oila azolaringizni ismini qo'shing va konsulga chiqaring.com
 	-so'ng oila azolarimizning 2 tasini ismini ro'yhatdan o'chirib tashalng va qolgan ismlarni konsulga chiqaring;
-	-keyin esa qolgan ismlarni tahrirlab ulani familyasini ham qo'shing --> "Ali" > "Olimov Ali" . va konsulga chiqaring;
+	-keyin esa qolgan ismlarni tahrirlab ularni familyasini ham qo'shing --> "Ali" > "Olimov Ali" . va konsulga chiqaring;
 	-so'ngra avval o'chirib yuborgan ismlaringizni qaytadan ro'yhatgfa qo'shing va ularni ham konsulga chiqaring;
 
 2) musbat_sonlar va manfiy_sonlar degan ikkita ro'yhat(list) yarating. so'ngra ularni birlashtirib yangi 'sonlar' deb nomlangan

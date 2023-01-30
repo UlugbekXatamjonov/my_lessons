@@ -9,7 +9,10 @@ Thame: Lug'atlar(Dictionary) va Ro'yhatlar(List) bilan ishlash
 #         "ism":"ALi",
 #         "familya":'Valiyev',
 #         "t_yil":2000,
-#         "kasbi":"o'qtuvchi"    
+#         "kasbi":{
+# 			'kasb1':"talaba",
+# 			"kasb2":"dasturchi"
+# 		}   
 #     },
     
 #     "inson_2" : {
@@ -27,12 +30,12 @@ Thame: Lug'atlar(Dictionary) va Ro'yhatlar(List) bilan ishlash
 #     }
 # }
 
-# print(insonlar['inson_1']['ism'])
+# print(insonlar['inson_1']['kasbi']['kasb1'])
 # print(insonlar['inson_1']['kasbi'])
 
-# print(f"Salom bu inson {insonlar['inson_1']['ism']} \
-# {insonlar['inson_1']['familya']} \
-# kasbi {insonlar['inson_1']['kasbi']}")
+# print(f"Salom bu inson {insonlar['inson_2']['ism']} \
+# {insonlar['inson_2']['familya']} \
+# kasbi {insonlar['inson_2']['kasbi']}")
 
 
 """ Lug'at ichida ro'yhat """
@@ -44,7 +47,7 @@ Thame: Lug'atlar(Dictionary) va Ro'yhatlar(List) bilan ishlash
 #     "nigina":['kaktus','atirgul']    
 # }
 
-# print(qizlar['anora'][0], qizlar['ezoza'][1])
+# print(qizlar['anora'][0])
 # print(qizlar['dilshoda'][1])
 # print(qizlar['ezoza'][0])
 
@@ -71,14 +74,11 @@ Thame: Lug'atlar(Dictionary) va Ro'yhatlar(List) bilan ishlash
 # }
 # talabalar = [talaba_1, talaba_2]
 
-# print(talabalar[0]['ism'])
+# print(talabalar[0]['fan'])
 
 # for talaba in talabalar:
-#  	print(f"Talaba: {talaba['ism'].title()} {talaba['familya'].title()}, "
-# 		f"guruhi: {talaba['guruh'].title()}, "
-# 		f"o'qiyotgan fani: {talaba['fan'].title()}"
-# )
-   
+# 	for key, value in talaba.items():
+# 		print(f"{key} - {value}")
     
 
 """ ro'yhat ichida ro'yhat """

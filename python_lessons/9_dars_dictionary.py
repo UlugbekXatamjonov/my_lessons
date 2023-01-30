@@ -1,15 +1,15 @@
 """
-Thame: Dictionry(Lug'atlar)
+Thame: Dictionary(Lug'atlar)
 """
 
-# taomlar = {
-#     'ali':'osh',
-#     'vali':'shashlik',
-#     'hasan':"lag'mon",
-#     'husan':"mastava",
-#     'olim':"somsa",
-#     'nodir':"kabob",
-# }
+taomlar = {
+    'ali':'osh',
+    'vali':'shashlik',
+    'hasan':"lag'mon",
+    'husan':"mastava",
+    'olim':"somsa",
+    'nodir':"kabob",
+}
 
 """ 
 taomlar = {'ali':'osh'}
@@ -26,24 +26,24 @@ nomi    = {'key':'value'}
 #     "student":True,
 #     "oila":["ota","ona",'aka']
 # }
-
 # print(buyumlar)
 
 
-
 """ Qiymat qo'shish """
-# taomlar['bobur'] = 'norin'
-# taomlar['azimjon'] = input("Azimjoning taomi ? ")
+# taomlar["nodir"] = 'norin'
+# taomlar['azimjon'] = int(input("Azimjoning taomi ? "))
 # print(taomlar)
 
-# taomlar.update({"nodir":"lg'mon"})
+# taomlar.update({"akramjon":"lag'mon"})
 # print(taomlar)
+
+
 
 """ Qiymatni o'zgartirish / update() """
 # taomlar["hasan"] = 'qozon_kabob'
 # print(taomlar)
 
-# taomlar.update({"olim":"manti"})
+# taomlar.update({"olin":"manti"})
 # print(taomlar)
 
 """ Qiymatni o'chirish """
@@ -69,7 +69,7 @@ nomi    = {'key':'value'}
 
 """ get() metodi """
 # print(taomlar["abror"])
-# print(taomlar.get("abror","Bunday key yo'q"))
+# print(taomlar.get("nodir","Bunday key yo'q"))
 
 """ items() metodi """
 # print(taomlar)
@@ -84,7 +84,7 @@ nomi    = {'key':'value'}
 # }
 # savol = input("Davlat nomini kiriting: ").lower()
 # if savol in davlatlar:
-#     print(f"Siz so'ragan {savol.title()}ning poytaxti {davlatlar[savol].title()}")
+#     print(f"Siz so'ragan {savol.upper()}ning poytaxti {davlatlar[savol].title()}")
 # else:
 #     print(f"Siz so'ragan {savol.title()} haqida bizda malumot yo'q")
 
@@ -103,7 +103,7 @@ nomi    = {'key':'value'}
 #     '2':'Hasan',
 #     '3':'Husan',    
 # }
-# for kalit, qiymat in ismlar.items(): # items
+# for kalit, qiymat in ismlar.items(): # items --> buyhum 
 #     print(f"Salom do'stim {qiymat} sening tartib raqaming {kalit}")
 
 # for key in ismlar.keys(): # key
@@ -124,7 +124,7 @@ nomi    = {'key':'value'}
 # oila['opa'] = input("Opangizni ismi: ")
 # print(oila)
 
-""" Do'kon """
+# """ Do'kon """
 # mahsulotlar = {
 #     "olma":4500,
 #     "nok":2000,
@@ -166,12 +166,13 @@ nomi    = {'key':'value'}
 #     print(f'{y.title()}', end=' ')
 
 
+
 """
 Vazifa:
 
 1) otam (onam, akam, ukam, va hokazo) degan lug'at yarating va lug'atga shu inson haqida kamida 3 ta 
     m'alumot kiriting (ismi, tu'gilgan yili, shahri, manzili va hokazo). Lug'atdagi ma'lumotni matn shaklida 
-    konsolga chiqaring Otamning ismi Mavlutdin, 1954-yilda, Samarqand viloyatida tug'ilgan
+    konsolga chiqaring M: Otamning ismi Mavlutdin, 1954-yilda, Samarqand viloyatida tug'ilgan
     
 2) Oila a'zolaringizning sevimli taomlari lug'atini tuzing. Lug'atda kamida 5 ta ism-taom jufltigi bo'lsin. 
     Kamida uch kishining sevimli taomini konsolga chiqaring: Alining sevimli taomi osh

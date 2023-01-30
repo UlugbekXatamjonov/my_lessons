@@ -18,13 +18,15 @@ True/False bilan teng kuch bilan 1/0 ham ishlatiladi.
 # if a > b:
 #     print(f"{a} {b} dan katta")
 # else:
-#     print(f"{a} {b} dan kichik")
+#     print(f"{b} {a} dan kichik")
 
 
 """ bool() funksiyasi """
 """ bool() funksiyasi har qanday qiymatni baholashga imkon beradi va bizga True yoki False javobini qaytaradi """
-# print(bool("Salom"))
-# print(bool(17))
+# matn =  ""
+# son = -9
+# print(bool(matn))
+# print(bool(son))
 
 # x = "Salom"
 # y = 17
@@ -58,10 +60,6 @@ Har qanday Tuple, List, Set va Dictionary, agar u bo'sh bo'lmasa --> True
 # print(bool(()))
 
 """ Masalalar """
-# x = 255
-# y = "Hello"
-# # print(isinstance(x, 6
-
 # ism = input("ismingizni kiriting: ")
 # if bool(ism):
 #     print(ism)
@@ -92,7 +90,7 @@ Arifmmetik Operatorlar
 /	Bo'lish	            x / y	
 **	Darajaga ko'tarish	x ** y	
 //	Yaxlidlab bo'lish	x // y
-
+%   Qoldiqli bo'lish	x %  y
 """
 # a = 15
 # b = 7
@@ -109,18 +107,17 @@ Belgilash operatorlari
 /=	   x /= 3	  x = x / 3	
 //=	   x //= 3	  x = x // 3	
 **=	   x **= 3	  x = x ** 3
+%=	   x %= 3	  x = x % 3
 	
 """
 
-# x= 5
+# x = 5
 
 # x **= 3 # x = x ** 3
 # print(x)
 
 # x //= 3 # x = x // 3
 # print(x)
-
-
 
 
 """
@@ -144,15 +141,16 @@ Taqoslash operatorlari
 
 """ 
 Mantiqiy operatorlar 
+x=7
 
 and 	Ikkala shart to'gri bo'lsa 	            x < 5 and  x < 10	
-or	    Ikkala shartdan biri to'gri bo'lsa	    x < 5 or x < 4	
+or	    Ikkala shartdan biri to'gri bo'lsa	    x < 10 or x < 5	
 not	    Inkor. Ikkala shart to'gri bo'lsa	    not(x < 5 and x < 10)
 
 """
 # x = 5
 # print(x > 3 and x < 10)
-# print(x < 5 or x < 4)
+# print(x < 7 or x < 4)
 # print(not(x < 5 and x < 10))
 
 """

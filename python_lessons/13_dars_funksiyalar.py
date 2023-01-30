@@ -5,15 +5,17 @@ Thame: Funkcions(Funksiyalar)
 """ Funksiyadan qiymat qaytarish """
 # def full_name(name, surname):
 #     """ To'liq ism qaytaradigan funksiya """
-#     full_name = f"{name.title()} {surname.title()}"
-#     return full_name # qiymat qaytarish uchun return operatorini ishlatamiz
+#     name = f"{name.title()} {surname.title()}"
+#     return name # qiymat qaytarish uchun return operatorini ishlatamiz
 
 """ Funksiyamiz return operatori yordamida full_name degan o'zgaruvchining qiymatini qaytaradi"""
 
 # person1 = full_name("ALi", "Olimov")
 # person2 = full_name("Husanov", "Hasanov")
+# person3 = full_name("Aziza", "Olimova") #
 # print(person1)
 # print(person2)
+
 
 """
     Qiymat qaytaradigan funksiyaning afzalligi shundaki, biz bu qiymatlardan keyin ham 
@@ -40,16 +42,16 @@ Thame: Funkcions(Funksiyalar)
     
 """ Funksiyadan lug'at qaytarish """
 # def person_info(name, surname, birth, gender, age, job=None):
-    # """ Inson haqidagi malumotlarni qaytaruvchi funksiya """
-    # person = {
-    #     'name': name,
-    #     'surname': surname,
-    #     "birth": birth,
-    #     "gender": gender,
-    #     "age": age,
-    #     "job": job
-    # }
-    # return person
+#     """ Inson haqidagi malumotlarni qaytaruvchi funksiya """
+#     person = {
+#         'name': name,
+#         'surname': surname,
+#         "birth": birth,
+#         "gender": gender,
+#         "age": age,
+#         "job": job
+#     }
+#     return person
 
 """ 'job' nomli parametrga 'None' standart qiymatini berib ketdik. 
     None Pythonda mavjud emas ma'nosini beradi, va if yordamida tekshirganda 
@@ -59,12 +61,14 @@ Thame: Funkcions(Funksiyalar)
 # person2 = person_info("Ahmad", "Abbosov", 1987, "erkak", 34)
 # insonlar = [person1, person2]
 
+""" 1-usul """
 # print("Insonlar haqida malumotlar: ")
 # for inson in insonlar:
 #     print(f"{inson['name']} {inson['surname']}. {inson['birth']}-yilda tug'ilgan,\
 # hozirda {inson['age']} yoshda. Jinsi {inson['gender']}. \
 # Kasbi {inson['job']} ")
 
+""" 2-usul """
 # print("Insonlar haqida malumotlar: ")
 # for inson in insonlar:
 #     if inson['job']:
@@ -86,10 +90,9 @@ Thame: Funkcions(Funksiyalar)
 #     return oila
 
 # oila1 = oila(4)
-# oila2 = oila(7)
-# oila3 = oila(3) 
-
+# oila2 = oila(7) 
 # print(oila1)
+# print(oila2)
 
 
 """ Funksiyani tsiklda ishlatish """
@@ -130,14 +133,15 @@ Thame: Funkcions(Funksiyalar)
 #         narh = avto['narh']
 #     else:
 #         narh = "Noma'lum"
-#     print(f"{avto['rang']} {avto['model']}. Narhi: {narh}")
+#     print(f"{avto['kompaniya']} {avto['rang']} {avto['model']}. Narhi: {narh}")
 
 """ pass operatori """
 """
 pass - operatori malum vaqt funksiyani ishlatmaslik kerak bo'lganda kerak bo'ladi
-"""
+# """
 # def name(ism):
-#     print(ism)
+#     pass
+    
 # name("Abbos")
 
 # def name(ism):
