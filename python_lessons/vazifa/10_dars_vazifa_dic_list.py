@@ -106,11 +106,17 @@ cars = [car_1, car_2, ...]
 
 # print(f" LG kompaniyasining telefon modellari:", end=' ')
 # for  n in texnikalar[0][0]:
-#     # print(n, end=', ')
-#     if n == texnikalar[0][0][-1]:
-#         print(f"{n}")
-#     else:
-#         print(f"{n}", end=', ')
+#     print(n, end=', ') # 1-usul
+    
+    # if n == texnikalar[0][0][-1]: # 2-usul
+    #     print(f"{n}.")
+    # else:
+    #     print(f"{n}", end=', ')
+    
+    # if n == texnikalar[0][0][-1]: # 3-usul
+    #         print(n)
+    #     break
+    # print(n, end=', ')
 
 # print(f" Sumsung kompaniyasining telefon modellari:", end=' ')
 # for  n in texnikalar[0][1]:
@@ -152,60 +158,60 @@ cars = [car_1, car_2, ...]
 
 """ 2 """
 
-# oilalar = {
-# 	'oila1':{
-# 		'ota':{
-# 			'ism':"Alijon",
-#             'familya':"Mamajonov",
-#             'yosh':'32',
-#             'kasb':"Duradgor",
-# 		},
-# 		'ona':{
-# 			'ism':'Munisa',
-#             'familya':"Mamajonova",
-#             'yosh':'30',
-#             'kasb':"Tikuvchi",
-# 		},
-#         'aka':{
-# 			'ism':'Nuraziz',
-#             'familya':"Mamajonov",
-#             'yosh':'18',
-#             'kasb':"O'quvchi",
-# 		},
-#         'uka':{
-# 			'ism':'Sardorbek',
-#             'familya':"Mamajonov",
-#             'yosh':'15',
-#             'kasb':"O'quvchi",
-# 		},
-#     },
-# 	'oila2':{
-# 		'ota':{
-# 			'ism':"Umarbek",
-#             'familya':"Aliyev",
-#             'yosh':'42',
-#             'kasb':"Shifokor",
-# 		},
-# 		'ona':{
-# 			'ism':'Nozima',
-#             'familya':"Aliyeva",
-#             'yosh':'39',
-#             'kasb':"Hamshira",
-# 		},
-#         'aka':{
-# 			'ism':'Jasur',
-#             'familya':"Aliyev",
-#             'yosh':'21',
-#             'kasb':"Talaba",
-# 		},
-#         'uka':{
-# 			'ism':'Abdulloh',
-#             'familya':"Aliyev",
-#             'yosh':'19',
-#             'kasb':"O'quvchi",
-# 		},
-# 	}
-# }
+oilalar = {
+	'oila1':{
+		'ota':{
+			'ism':"Alijon",
+            'familya':"Mamajonov",
+            'yosh':'32',
+            'kasb':"Duradgor",
+		},
+		'ona':{
+			'ism':'Munisa',
+            'familya':"Mamajonova",
+            'yosh':'30',
+            'kasb':"Tikuvchi",
+		},
+        'aka':{
+			'ism':'Nuraziz',
+            'familya':"Mamajonov",
+            'yosh':'18',
+            'kasb':"O'quvchi",
+		},
+        'uka':{
+			'ism':'Sardorbek',
+            'familya':"Mamajonov",
+            'yosh':'15',
+            'kasb':"O'quvchi",
+		},
+    },
+	'oila2':{
+		'ota':{
+			'ism':"Umarbek",
+            'familya':"Aliyev",
+            'yosh':'42',
+            'kasb':"Shifokor",
+		},
+		'ona':{
+			'ism':'Nozima',
+            'familya':"Aliyeva",
+            'yosh':'39',
+            'kasb':"Hamshira",
+		},
+        'aka':{
+			'ism':'Jasur',
+            'familya':"Aliyev",
+            'yosh':'21',
+            'kasb':"Talaba",
+		},
+        'uka':{
+			'ism':'Abdulloh',
+            'familya':"Aliyev",
+            'yosh':'19',
+            'kasb':"O'quvchi",
+		},
+	}
+}
 
 
 # for key, value in oilalar.items():
@@ -241,9 +247,9 @@ cars = [car_1, car_2, ...]
 #         print(f"\n{k.title()}ning taomlari: ", end=' ')
 #         for x in v:
 #             if x == v[-1]:
-# 				print(x)
-# 			else:
-# 				print(f"{x}", end=', ')
+#                 print(x)
+#             else:
+#                 print(f"{x}", end=', ')
 #     print('\n')
 
 # for key, value in dostalar.items():
@@ -286,8 +292,9 @@ cars = [car_1, car_2, ...]
 
 # cars = [car_1, car_2, car_3, car_4]
 
+# x = 1
 # for car in cars:
-#     print("\n----- New car ------")
+#     print(f" {x} - mashina")
 #     for key, value in car.items():
 #         print(f"{key.title()} - {value.title()} ")
-
+#     x += 1

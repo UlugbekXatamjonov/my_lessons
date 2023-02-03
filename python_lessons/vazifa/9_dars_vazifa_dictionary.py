@@ -169,3 +169,69 @@ Restoran menusi lug'atini tuzing(kamida 10 ta taom-narh juftligini kiriting). Fo
 #     else:
 #         print(f"Kechirasiz, bizda {buyurtma.title()} yo'q.")
 
+
+
+""" 8 
+Foydalanuvchidan istalgan davlatni kiritishni so'rang agar foydalanuvchi davlar kiritsa uning poytaxini, 
+    poytaxt kiritsa uning davlatini konsulga chiqaring. Agar foydalanuvchi lug'atda yo'q davlatni kiritsa, 
+    "Bizda bunday dacvlat haqida ma'lumot yo'q" degan xabarni chiqaring.
+"""
+# davlatlar = {
+#     "o'zbekiston":'toshkent',
+#     'aqsh':'washington d.c.',
+#     'rossiya':'moskva',
+#     'tojikiston':'dushanbe',
+#     "qirg'iziston":'bishkek',
+#     'qozog\'iston':'nursulton',
+#     'malayziya':'kuala-lumpur',
+#     'singapur':'sungapur',
+#     'italiya':'rim'
+# }
+
+
+# savol = input("Istalgan davlat yoki poytaxtni kiriting: ").lower()
+# x = False
+# for key, value in davlatlar.items():
+#     if savol == value:
+#         print(f"Siz yozgan {savol} shaxri {key.title()}da joylashgan")
+#         x = True
+#     elif savol == key:
+#         print(f"Siz yozgan {savol} ning poytaxti {value.title()} ")
+#         ex = True
+# if x == False:
+#     print("malumot yoq") 
+
+menu = {
+    "osh":15000,
+    "dimlama":12000,
+    "norin":20000,
+    "non":2000,
+    "choy":1000,
+    "salat":5000,
+    "shashlik":6000,
+    "musqaymoq":3000,
+    "pirojni":3000,
+    "somsa":5000
+}
+
+narx = 0
+zakaz = ""
+yoq = []
+
+for n in range(3):
+    zakaz = input(f"{n+1}- taomni kiriting: ").lower()
+    if zakaz in menu:
+        narx += menu[zakaz]
+        print(f"{zakaz} - {menu[zakaz]}")
+    else:
+        yoq.append(zakaz)
+
+if narx != 0:
+    print(f"Ummumiy narx {narx} so'm")
+
+if yoq != []:
+    print("Bizda quidagi taomlar yo'q")
+    for i in yoq:
+        print(i, end=" ")
+        
+

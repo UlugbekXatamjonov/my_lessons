@@ -1,7 +1,7 @@
 """
 Thame: While tsikli
 """
-# sonlar = [1,2,3,4,5,6,7,8,9,1]
+# sonlar = [1,2,3,4,5,6,7,8,9,10]
 # for son in sonlar:
 #     print(son)
 
@@ -9,7 +9,7 @@ Thame: While tsikli
 # son = 1
 # while son < 100:
 #     print(son)
-#     son = son + 1 
+#     son += 1 
     
 
 """ 2 """
@@ -25,13 +25,28 @@ Thame: While tsikli
 """ 3 """
 # while True: # abadiy tsikl
 #     savol = input("son kiriting: ")
-#     if savol != 'exit' and savol.isdigit():
+#     if savol.isdigit():
 #         print(int(savol)**2)
 #     elif savol == 'exit':
 #         break # tsiklni to'xtatish uchun 
 #     else:
 #         print("son kiriting!!!")
-  
+
+""" Tug'ilgan yil """
+# while True:
+#     yosh = input("Yoshingizni kiriting: ")
+#     if yosh.isdigit():
+#         if int(yosh) >= 10 and int(yosh) <= 110:
+#             print(f"Siz {2023-int(yosh)}-yilda tug'ilgansiz")
+#         else:
+#             print("Siz noto'g'ri yosh oralig'ini kiritingiz")
+#     elif yosh == "exit":
+#         print("Dastur tugadi")
+#         break
+#     else:
+#         print("Siz son kiritmadingiz !!!")
+ 
+
 """ Abadiyt tsikl """
 # x = 1
 # while x < 10:
@@ -44,12 +59,13 @@ Thame: While tsikli
 
 # ishora = True
 # while ishora: # = while True -> abadiy tsikl
-#     savol = input("Istalgan son kiriting(dasturni to'xtatish uchun 'exit'\
-#                   deb yozing):")
+#     savol = input("Istalgan son kiriting(dasturni to'xtatish uchun 'exit' deb yozing):")
 #     if savol == 'exit':
 #         ishora = False # dastur to'xtashi uchun
-#     else:
+#     elif savol.isdigit() or float(savol):
 #         print(float(savol)**2)
+#     else:
+#         print("Siz son kiritmadingiz!!!")
 
 
 """ continue """
@@ -59,14 +75,30 @@ Thame: While tsikli
 #         continue # davom etish / bu holatda 6 ni tashlab o'tib ketadi
 #     else:
 #         print(son, end=' ')
+   
+# ishora = 1 # 1 = True
+# while ishora:
+#     son = input("Son kiriting: ")
+#     if son.replace('.','').isdigit(): # !!!!
+#         if float(son) == 0:
+#             continue
+#         else:
+#             print(f"100 ni {son} ga bo'lsak {100/float(son)} chiqadi")
+#     elif son == 'no':
+#         print("dastur tugadi")
+#         ishora = 0 # 0 = False
+#     else:
+#         print("Siz son kiritmadingiz !!!")
+
+
 
 """ while va else """
-# x = 0
-# while x < 3:
-#     print(f"{x+1}-print")
-#     x = x + 1
-# else:
-#     print('end print')
+x = 0
+while x < 3:
+    print(f"{x+1}-print")
+    x = x + 1
+else:
+    print('end print')
 
 """ while do ga misol """
 """ While - shartni tekshirib keyin kodni bajaradi
