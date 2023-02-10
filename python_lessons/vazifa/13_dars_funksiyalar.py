@@ -10,7 +10,7 @@ Thame: Funkcions(Funksiyalar)
     Lug'atda foydalanuvchi yoshi ham bo'lsin. Ba'zi argumentlarni kiritishni ixtiyoriy 
     qiling (masalan, tel.raqam, el.manzil)
 """
-# def mijiz_info(ism,familya,tjoy,tyil,tel=" ",gmail=" ") :
+# def mijoz_info(ism,familya,tjoy,tyil,tel=" ",gmail=" ") :
 #     """Mijoz haqidagi ma'lumotlarni shakllantiruvchi funksia"""
 #     mijoz = {'ism': ism,
 #               'familya':familya,
@@ -68,16 +68,14 @@ Thame: Funkcions(Funksiyalar)
 
 """ 3) Uchta son qabul qilib, ulardan eng kattasini qaytaruvchi funksiya yozing
 """
-# def kattasi(x,y,z):
-#     if y>=x:
-#         x = y
-#     if z>=x:
-#         x = z
-#     return x
+# def big(x,y,z):
+#     if x >= y:
+#         y = x
+#     if z >= y:
+#         y = z
+#     return y    
 
-# a = kattasi(1,2,4)
-# print(a)
-
+# print(big(7,3,3))
 
 
 """ 4) Foydalanuvchidan aylaning radiusini qabul qilib olib, uning radiusini, diametrini, 
@@ -112,6 +110,7 @@ Thame: Funkcions(Funksiyalar)
 #             for x in range(2,n):
 #                 if(n%x==0):
 #                     tub = False
+#                     break
 #         if tub:
 #             tub_sonlar.append(n)
                 
@@ -123,22 +122,23 @@ Thame: Funkcions(Funksiyalar)
 """ 6) Foydalanuvchidan son qabul qilib, shu son miqdoricha Fibonachchi ketma-ketligidagi 
     sonlar ro'yxatni qaytaruvchi funksiya yozing.  
     Ta'rif: Har bir hadi o'zidan oldingi ikkita hadning yig'indisiga teng bo'lgan 
-    ketma-ketlik Fibonachchi ketma-ketligi deyiladi. Bunda boshlang'fzish had ko'pincha 
+    ketma-ketlik Fibonachchi ketma-ketligi deyiladi. Bunda boshlang'ichh had ko'pincha 
     1 deb olinadi.  1, 1, 2, 3, 5, 8, 13, 21, 34, 55,...
 """
 # def fibonaci(n):
-#     sonlar = []
+#     sonlar = [] # 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 
 #     for x in range(n):
 #         if x==0 or x==1:
 #             sonlar.append(1)        
 #         else:
 #             sonlar.append(sonlar[x-1]+sonlar[x-2])
+#     print(sonlar[-1]/sonlar[-2]) # tekshirish
 #     return sonlar
 
 
-# a1 = fibonaci(10)
-# print(a1)
-
+# a1 = fibonaci(100)
+# # print(a1)
+# # 
 
 
 

@@ -13,6 +13,7 @@ Thame: Funkcions(Funksiyalar)
 
 # talabalar = ['ali', 'vali', 'hasan', 'husan']
 # baholar = bahola(talabalar)
+
 # print(baholar)
 
 
@@ -24,22 +25,17 @@ imkoniyati bor.
 """
 
 """ *args usuli """ #   *args ---> arguments
-# def summa(*sonlar):
+# def summa(son1, son2, *sonlar):
 #     """Kiritilgan sonlar yig'indisini hisoblaydigan funksiya"""
-#     yigindi = 0
+#     yigindi = son1 + son2
 #     for son in sonlar:
 #         yigindi += son
         
-#     kopaytma = 1
-#     for son in sonlar:
-#         kopaytma *= son
-        
 #     return yigindi
-#     return kopaytma
 
-# print(summa(1,2,3,4,5,6,7,8,9))
+# print(summa(1,2,3,4,5,6,7,8,9, 10, 11, 12, 13, 14, 15, 16, 17))
 # print(summa(-7,0,8))
-# print(summa(23))
+# print(summa(23,4))
 
 """
 *args usulida, bacha uzatilgan parametrlar (bir dona bo'lsa ham) funksiya ichida.
@@ -68,9 +64,10 @@ va bunday parametrlar soni noma'lum bo'lsa, argument oldidan ikkita yulduzcha qo
 #     return malumotlar
 
 # inson1 = info("Abubakir", "Olimov")
-# inson2 = info("Hasan", "Abdullayev", yosh=34, kasb="haydovchi")
+# inson2 = info("Hasan", "Abdullayev", yosh=34, kasb="haydovchi", tel=998997897878, email="qwerty@gmail.com")
 # print(inson1)
 # print(inson2)
+
 
 """ Modullar """
 """
@@ -95,6 +92,7 @@ uning ichida main.py va funksiyalar.py deb nomlangan 2ta fayl hosil qilamiz.
 
 """ funksiyalar faylidan kerakli funksiyalarni chaqirib(yuklab) olamiz"""
 # from funksiyalar import bahola
+# import funksiyalar
 # from yordamchi_funksiyalar.y_funksiyalar import summa
 # from yordamchi_funksiyalar.y_funksiyalar import summa as yig
 
@@ -136,7 +134,7 @@ Lambda funksiyalari istalgan miqdordagi argumentlarga ega bo'lishi mumkin, ammo 
 
 """ 2       Istalgan songa 10 ni qo'shuvchi funksiya """ 
 # x = lambda a : a + 10
-# print(x(9))
+# print(x(3))
 
 """ 3       a va b ni ko'paytmasini qaytaradigan funksiya """
 # x = lambda a, b : a * b
@@ -151,7 +149,6 @@ Lambda funksiyalari istalgan miqdordagi argumentlarga ega bo'lishi mumkin, ammo 
 
 # ikkiga = myfunc(2) # n
 # uchga = myfunc(3)
-
 # beshga = myfunc(5)
 
 # print(ikkiga(10)) # a
@@ -169,7 +166,7 @@ Vazifa:
 
 2) Inson haqidagi malumotlarni qabul qilib olib, ularni lug'at ko'rinishida qaytaradigan funksiyani 
     'person.py' fayliga yozing. va uni ham 'main.py' fayliga chaqirib olib ishlating.
-    Funksiya yozishda *args va *kvargs usullaridan foydalaning.
+    Funksiya yozishda *args va **kvargs usullaridan foydalaning.
 
 """
 

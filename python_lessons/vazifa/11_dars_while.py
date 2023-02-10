@@ -38,7 +38,7 @@ yozib ko'ring (break, ishora)
 #     if yosh.lower() == 'exit' or yosh.lower() == 'quit':
 #         print("Bizni hayvonot bog'imizni tanlaganingiz uchun rahmat !")
 #         ishora = 0
-#     elif int(yosh) >= 0 and int(yosh) <= 100:
+#     elif yosh.isdigit() and int(yosh) >= 0 and int(yosh) <= 100:
 #         if  int(yosh) <=7:
 #             narx = 2_000
 #         elif int(yosh) <=18:
@@ -47,12 +47,11 @@ yozib ko'ring (break, ishora)
 #             narx = 7_000
 #         elif 65 <= int(yosh) :
 #             narx = "bepul"
-        
 #         if narx == 'bepul':
 #             print(f"Sizga kirish {narx}")
 #         else:
 #             print(f"Sizga kirish {narx} so'm")
-#     elif int(yosh) >100:
+#     elif yosh.isdigit() and int(yosh) >100:
 #         print("Iltimos 100 dan kichik son kiriting !")
 #     else:
 #         print("Iltimos musbat son kiriting")
@@ -81,7 +80,7 @@ while True:
 # savol += "(dasturni to'xtatish uchun 'exit' deb yozing): "
 
 # while True:
-#     qiymat = input(savol)
+#     qiymat = input("Musbat son kiriting dasturni to'xtatish uchun 'exit' deb yozing): ")
 #     if qiymat.lower() == 'exit':
 #         break
 #     elif qiymat.isdigit() and int(qiymat) <=0:
@@ -89,6 +88,8 @@ while True:
 #     elif qiymat.isdigit():
 #         ildiz = round(float(qiymat)**(0.5),3)
 #         print(f"{qiymat} ning ildizi {ildiz} ga teng")
+#     else:
+#         continue
 
 """ 4 
 Foydalanuvchidan tizimga kirishi uchun parol so'rang, foydalanuvchi to'gri javob 
@@ -138,13 +139,18 @@ ularning narxini ko'rsating.
 #     print(f"{meva} - {narx} so'm")
 
 # while True:
-#     meva = input("Sotib olmoqchi bo'lgan mahsulotingiz nomini kiriting:")
+#     meva = input("Sotib olmoqchi bo'lgan mahsulotingiz nomini kiriting:").lower()
 #     if meva in mahsulotlar:
-#         soni = int(input("Necha kg sotib olasiz: "))
-#         savad.append(meva)
-#         for key, value in mahsulotlar.items():
-#             if key == meva:
-#                 summa = summa + value * soni
+#         while True:
+#             soni = input("Necha kg sotib olasiz: ")
+#             if soni.isdigit() and int(soni) > 0:
+#                 savad.append(meva)
+#                 for key, value in mahsulotlar.items():
+#                     if key == meva:
+#                         summa = summa + value * int(soni)
+#                 break
+#             else:
+#                 print("Siz son kiritmadingiz!!!")
 #     else:
 #         print(f"Kechirasiz do'konimizda {meva} yo'q")
     
@@ -167,10 +173,9 @@ ularning narxini ko'rsating.
 """
 # son = 1
 # yigindi = 0
-# while son < 100:
-#     if son%2==0:
-#         yigindi = yigindi + son
-#     son = son + 1
+# while son < 1000:
+#     yigindi = yigindi + son
+#     son = son + 2
 # print(yigindi)
 
 

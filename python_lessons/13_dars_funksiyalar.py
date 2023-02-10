@@ -8,11 +8,14 @@ Thame: Funkcions(Funksiyalar)
 #     name = f"{name.title()} {surname.title()}"
 #     return name # qiymat qaytarish uchun return operatorini ishlatamiz
 
+# full_name("ALi", "Olimov")
+
 """ Funksiyamiz return operatori yordamida full_name degan o'zgaruvchining qiymatini qaytaradi"""
 
 # person1 = full_name("ALi", "Olimov")
-# person2 = full_name("Husanov", "Hasanov")
-# person3 = full_name("Aziza", "Olimova") #
+# person2 = full_name("Husan", "Hasanov")
+# person3 = full_name("Aziza", "Olimova")
+
 # print(person1)
 # print(person2)
 
@@ -32,10 +35,19 @@ Thame: Funkcions(Funksiyalar)
 #     return full_name # qiymat qaytarish uchun return operatorini ishlatamiz
 
 # person1 = full_name("ALi", "Olimov", "Tolipovich")
-# person2 = full_name("Husanov", "Hasanov")
+# person2 = full_name("Husan", "Hasanov")
 # print(person1)
 # print(person2)
 
+
+# def taqqoslash(son1, son2, son3):
+#     x= max(son1, son2, son3)
+#     return x
+# a = taqqoslash(4,5,6)
+# b = taqqoslash(22,43,-6)
+
+# print(a)
+# print(b)
 
 """ Funksiyadan sodda qiymat emas, ro'yxat, lu'gat va boshqa ma'lumot turlarini ham  
     qaytarishimiz mumkin """
@@ -60,6 +72,10 @@ Thame: Funkcions(Funksiyalar)
 # person1 = person_info("Olimjon", "Vohidov", 1998, "erkak", 25, "quruvchi")
 # person2 = person_info("Ahmad", "Abbosov", 1987, "erkak", 34)
 # insonlar = [person1, person2]
+
+# print(person1)
+# print(person2)
+
 
 """ 1-usul """
 # print("Insonlar haqida malumotlar: ")
@@ -117,11 +133,11 @@ Thame: Funkcions(Funksiyalar)
 #     yili=input("Ishlab chiqarilgan yili: ")
 #     narhi=input("Narhi: ")
     
-#     #Foydalanuvchi kiritdan ma'lumotlardan avto_info yordamida 
-#     #lug'at shakllantirib, har bir lug'atni ro'yxatga qo'shamiz:
-#     avtolar.append(avto_info(kompaniya, model, rangi, korobka, yili, narhi))
+    #Foydalanuvchi kiritdan ma'lumotlardan avto_info yordamida 
+    #lug'at shakllantirib, har bir lug'atni ro'yxatga qo'shamiz:
+    # avtolar.append(avto_info(kompaniya, model, rangi, korobka, yili, narhi))
     
-#     # Yana avto qo'shish-qo'shmaslikni so'raymiz
+    # Yana avto qo'shish-qo'shmaslikni so'raymiz
 #     javob = input("Yana avto qo'shasizmi? (yes/no): ")
 #     if javob=='no':
 #         break

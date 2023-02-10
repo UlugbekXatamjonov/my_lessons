@@ -39,7 +39,7 @@ Thame: Funkcions(Funksiyalar)
 # def toq_juft() :
 #     """Sonni toq yoki juft ekanini aniqlaydigan funksia"""
 #     son = int(input("Istalgan butun sonni kiriting: "))
-#     if son%2==0 :
+#     if son%2==0:
 #         print(f"{son} juf son")
 #     else:
 #         print(f"{son} toq son")
@@ -51,21 +51,27 @@ Thame: Funkcions(Funksiyalar)
     Foydalanuvchidan ikkita son olib, ulardan kattasini konsolga chiqaruvchi funksiya yozing. 
     Agar sonlar teng bo'lsa "Sonlar teng" degan xabarni chiqaring.
 """
-# def katta_kichik() :
+# def katta_kichik():
 #     """Kiritilgan sonning eng kattasini ko'rsatuvchi funksia """
-#     son1 = int(input("1- sonni kiriting: "))
-#     son2 = int(input("2- sonni kiriting: "))
-#     if son1 > son2 :
-#         print(f"{son1}")
-#     elif son1 < son2 :
-#         print(f"{son2}")
-#     else:
-#         print("Sonlar teng")
+#     while True:
+#         son1 = input("1- sonni kiriting: ")
+#         son2 = input("2- sonni kiriting: ")
+#         if son1.isdigit() and son2.isdigit():
+#             if int(son1) > int(son2):
+#                 print(f"{son1}")
+#             elif int(son1) < int(son2):
+#                 print(f"{son2}")
+#             else:
+#                 print("Sonlar teng")
+#             break
+#         else:
+#             print("Siz son kiritmdingiz!!!")
 # katta_kichik()
 
 
 """ 5)
-    Foydalanuvchidan son qabul qilib, sonni 2 dan 10 gacha bo'lgan sonlarga qoldiqsiz bo'linishini tekshiruvchi funksiya yozing. Natijalarni konsolga chiqaring.
+    Foydalanuvchidan son qabul qilib, sonni 2 dan 10 gacha bo'lgan sonlarga qoldiqsiz 
+    bo'linishini tekshiruvchi funksiya yozing. Natijalarni konsolga chiqaring.
 """
 # def bolinish() :
 #     """berilgan sonni 2 dan 10 gacha bo'lgan sonlarga qoldiqsiz bo'linishini tekshiruvchi funksia """
@@ -97,7 +103,7 @@ Thame: Funkcions(Funksiyalar)
 # def tbu(k1, k2=5):
 #     g = round(sqrt(k1**2+k2**2),2)
 #     print(f"Katetlari {k1} va {k2} ga teng TBU ning gipotenuzasi taxminan {g} ga teng")
+
 # tbu(k2=6, k1=4)
 # tbu(6,5)
 # tbu(3)
-
