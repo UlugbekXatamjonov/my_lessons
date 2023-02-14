@@ -27,27 +27,27 @@ Thame: try-except
     Va bu dasturni funksiyaga joylang. Hamda uni yozishda 'try-except' dan foydalaning va yuzaga kelishi
     mumkin bo'lgan xatoliklarni oldini oling
 """
-def func():
-    sonlar = list(range(0,1000))
-    x_sonlar = []
+# def func():
+#     sonlar = list(range(0,1000))
+#     x_sonlar = []
 
-    try:
-        yosh = int(input("Iltimos yoshingizni kiriting: "))
+#     try:
+#         yosh = int(input("Iltimos yoshingizni kiriting: "))
     
-        for son in sonlar:
-            if son != 0:
-                if son%yosh == 0:
-                    x_sonlar.append(son)
+#         for son in sonlar:
+#             if son != 0:
+#                 if son%yosh == 0:
+#                     x_sonlar.append(son)
 
-        print(f"Sizning yoshingiz {yosh}da va bu {yosh} soni quyidagi sonlarga qoldiqsiz bo'linadi: ")
-        for x in x_sonlar:
-            print(x, end = " ")
+#         print(f"Sizning yoshingiz {yosh}da va bu {yosh} soni quyidagi sonlarga qoldiqsiz bo'linadi: ")
+#         for x in x_sonlar:
+#             print(x, end = " ")
     
-    except ValueError:
-        print("Siz son kiritmadingiz !!!")
-    except ZeroDivisionError:
-        print("Xatolik yuzaga keldi")        
-func()
+#     except ValueError:
+#         print("Siz son kiritmadingiz !!!")
+#     except ZeroDivisionError:
+#         print("Xatolik yuzaga keldi")        
+# func()
 
 """
 3) To'g'ri burchakli uchburchakning gipotenuzasini hisoblash. Ushbu kodda yuzaga kelishi mumkin bo'lgan hatoliklarni

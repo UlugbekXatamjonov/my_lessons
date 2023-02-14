@@ -1,6 +1,9 @@
 """
 Thame: Try - except
 """
+# son  = int(input("Son kiriting: "))
+# print(f"{son} ning kvadrati {son**2} ga teng")
+
 # try:
 #     son  = int(input("Son kiriting: "))
 #     print(f"{son} ning kvadrati {son**2} ga teng")
@@ -14,6 +17,7 @@ try - sizga xatolarni tekshirishga imkon beradi
 except - sizga xatoni xal qilishga, va uning o'rniga boshqa ma'lumot chiqishiga imkon beradi
 else - xato bo'lmaganda kodni bajarishga imkon beradi.
 """
+# x = "SAlom"
 
 # print(x)
 # print("Hello, world!")
@@ -38,7 +42,6 @@ else - xato bo'lmaganda kodni bajarishga imkon beradi.
 
 # x = 5
 # y = 0
-
 # try:
 #     z = x/y
 # except ZeroDivisionError:
@@ -100,7 +103,7 @@ else - xech qanday xatolik yuzaga kelmagan xollarda ishlatiladi
 
 """ finally """
 """
-'try' - blokida xatolik bo'ladimi yoki yo'qmi, qat'iy 'finally' nazar bajariladi.
+'try' - blokida xatolik bo'ladimi yoki yo'qmi, qat'iy nazar 'finally' bajariladi.
 """
 
 # a = 4
@@ -122,7 +125,7 @@ else - xech qanday xatolik yuzaga kelmagan xollarda ishlatiladi
 #     print(a+b)
 # except NameError:
 #     print("Name Error")
-#     raise NameError("Name Error - berilgan nomdagi o'zgaruvchi topilmaganda yuzaga keladi") 
+# raise NameError("Name Error - berilgan nomdagi o'zgaruvchi topilmaganda yuzaga keladi") 
 
 """ 
 try:
@@ -137,36 +140,40 @@ finally:
 
 """ Masalalar """
 """ 1 """
-# try:
-#     a = float(input("1-sonni kirirting:"))
-#     b = float(input("2-sonni kirirting:"))
-    
-#     if a>b: 
-#         print(f"{a}>{b}")
-#     elif a<b:
-#         print(f"{a}<{b}")
-#     else :
-#         print(f"{a}={b}")
-# except ValueError:
-#     print("Siz son kiritmadingiz")
-# except:
-#     print("Eror Eror Eror ")
-
+# def bigger():
+#     try:
+#         a = float(input("1-sonni kirirting:"))
+#         b = float(input("2-sonni kirirting:"))
+#     except ValueError:
+#         print("Siz son kiritmadingiz")
+#     except:
+#         print("Error Error Error ")
+#     else:
+#         if a>b: 
+#             print(f"{a}>{b}")
+#         elif a<b:
+#             print(f"{a}<{b}")
+#         else :
+#             print(f"{a}={b}")
+# bigger()
 
 """ 2 """
-# try:
-#     yil = int(input("Tug'ilgan yilingizni kiriting: "))
-#     if 2023 > yil > 0:
-#         print(f"Siz {2023-yil} yoshda ekansiz")
-#     elif yil < 0:
-#         print(f"Siz {2023-(-yil)} yoshda ekansiz")
+# def bithday():
+#     try:
+#         yil = int(input("Tug'ilgan yilingizni kiriting: "))
+#     except ValueError:
+#         print("Siz butun son kiritmadingiz !!!")
+#     except:
+#         print("Ma'lumot kiritishda xatolik yuzaga keldi.")
 #     else:
-#         print("Siz hali mavjud bo'lmagan yil kiritdingiz")
-# except ValueError:
-#     print("Siz son kiritmadingiz")
-# except:
-#     print("Boshqa xato turi")
+#         if 2023 > yil > 0:
+#             print(f"Siz {2023-yil} yoshda ekansiz")
+#         elif -2023 < yil < 0:
+#             print(f"Siz {2023-(-yil)} yoshda ekansiz")
+#         else:
+#             print("Siz hali mavjud bo'lmagan yil kiritdingiz")
 
+# bithday()
 
 """  
 Vazifa:

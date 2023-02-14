@@ -2,6 +2,7 @@
 Thame: Pythonda OOP va Class lar bilan tanishuv
 """
 """"
+
 Vazifa:
 
 1) Web sahifangiz uchun foydalanuvchi (user) klassini tuzing. Klassning xususiyatlari sifatida odatda 
