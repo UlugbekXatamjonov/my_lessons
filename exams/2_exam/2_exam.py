@@ -1,12 +1,12 @@
 """
 Pythondan 2-imtihon savollari 
-Thames: streengs, numbers, if-else-elif, for, lists, dictionary, while
+Thames: Dictionary, while, Functions, try-exept, 
 Tests       -> 20
 Next step   -> 15+
 Good result -> 18+
 
 KEYS = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 
-       D C C A D B C A D  A  B  B  D  B  C
+       C D A B D A C A D  A  C  B  A  B  C
 
 16)
 while True:
@@ -57,29 +57,26 @@ print(taomlar.get("abror","Bunday key yo'q"))
 
 """
 
-
 """
-1) Quida berilgan ro'yhatda  "Albanian" ning indexlari nechi ?
-   country = ["Uzbekistan", "Afrikaans", "Albanian", "Russian", "Serbian", "Serbian"]
-A) -2, 2       B) 2, -5     C) 3, -4       D) 2, -4
+1) Quidagi variantlardan qaybirida abadiy tsikil mavjud ?
+A) While True:   B) while False:  C) while True: D) while true:
+       pass             pass             pass           pass
+2) Abadiy tsiklni to'xtatuvchi operator ko'rsatilgan javobni belgilang
+A) Break    B) continue    C) while   D) break
 
-2) Quidagilardan qaybiri to'g'ri ?
-A) print('a'lochi')                           B) print("G'ani bugun shapaloqni "kattasini" yedi")
-C) print("Lola o'rik tagida o'tiribdi")       D) print('"2-B" sinfi a'\lochilar sinfi')
+3) Funksiya yaratish kalit so'zi ?
+A) def      B) class     C) return        D) break
 
-3) tuple() funksiyasining vazifasi ?
-A) O'zgaruvchan ro'yhat yaratish       B) O'zgarmas lug'at taratish
-C) O'zgarmas ro'yhat yaratish          D) O'zgaruvchi turini o'zgarmas qilish
-
-4) Matndagi barcha so'zlarning 1-harfini katta qilib beruvchi metod nomi ?
-A) title()     B) upper()       C) capitalize()        D) lower()
-
+4) "Docstring" nima ?
+A) Izoh     B) Funksiya haqida ma'lumot beruvchi matn  
+C) Funksiya nomi   D) Oddiy matn
+ 
 5) lover() metodining vazifasi ?
 A) Matndagi 1-so'zning 1-harfini katta qilib chiqaradi     B) Barcha harflarni kichik qilib chiqaradi
 C) Barcha hariflarni katta qilib chiqaradi                 D) Bunday metod yo'q
 
-6) "kichik yoki teng" belgisini to'gri ko'rsating
-A) =<      B) <=     C) ==      D) >=<
+6) Funksiyadan qiymat qaytarish uchun qaysi kalit so'zdan foydalanamiz ? 
+A) return   B) pass    C) break     D) Return
 
 7) mevalar deb nomlangan lug'atga to'gri element qo'shilgan javobni toping
 A) mevalar['bobur'] = anor         B) mevanlar['bobur'] = 'anor'
@@ -93,12 +90,12 @@ C) taonlar["hasan"] = 'qozon_kabob'        D) taomlar["hasan"] = qozon_kabob
 A) key(), value(), item()               B) keys(), append(), values()
 C) append(), remove(), insert()         D) keys(), values(), items()
 
-10) insert() metodining vazifasi nima ?
-A)  Ro'yhatga elementni indexi bo'yicha qo'shadi       B)  Ro'yhatdan elementni indexi bo'yicha o'chiradi
-C)  Ro'yhatdan elementni sug'urib oluvchi metod        D)  Sonli oraliq shakillantirish uchun funksiya
+10) Uzatilayotgan argumentlar soni nomalum bo'lsa biz qaysi usuldan foydalanamiz ?
+A) *args    B) args  C) **kwargs    D) key = argument 
 
-11) Quyidagi funksiyalardan qay biri ro'yhatdan elementni qiymati bo'yicha o'chiradi ?
-A) range()     B) remove()      C) delete()        D) del
+11) Uzatilayotgan "kalit so'z - qiymat" ko'rinishidagi argumentlar soni nomalum bo'lsa 
+    biz qaysi usuldan foydalanamiz ?
+A) *args    B) kwarg  C) **kwargs    D) kwargs
 
 12) Quidagi lug'atdan 'chinnigul' elementi konsulga to'gri chiqarilgan javobni toping
     qizlar = {
@@ -110,23 +107,17 @@ A) range()     B) remove()      C) delete()        D) del
 A) print(['dilshoda'][0])           B) print(qizlar['dilshoda'][1])
 C) print(qizlar['ezoza'][0])        D) print(['dilshoda'][1])
 
-13) Natijani toping.
-    sonlar = [1,2,3,4,5,6,7,8,9,10]
-    for son in sonlar:
-        if son <= 0 and son < 4:
-            print(son)
-A) 0,1,2,3          B) 1,2,3         C) 5,6,7,8,9,10        D) (hech narsa)
+13) Quidagilardan qaysi biri sizga xatolarni tekshirishga imkon beradi ?
+A) try B) else  C) raise D) except
 
-14) Natijani toping.
-    sonlar = [1,2,3,4,5,6,7,8,9,10]
-    for son in sonlar:
-        if son > 0 or  son < 0:
-            print(son)
-A) 0,1,2,3     B) 1,2,3 ... 7,8,9,10        C) 1,2,3,5,6,7,8,9,10      D) (hech narsa)
+14) Xech qanday xatolik yuzaga kelmagan xollarda quidagilardan qay biri ishga tushadi ?
+A) try   B) else    C) raise    D) except
 
 15) get() metodining vazifasi
-A) ro'yhatdagi yo'q element o'rniga xatolik matnini chiqaradi      B) ro'yhatdagi elementlarni chaqiradi
-C) lug'atdagi yo'q element o'rniga xatolik matnini chiqaradi       D) lug'atdagi elementlarni qiymatini chaqiradi
+A) ro'yhatdagi yo'q element o'rniga xatolik matnini chiqaradi      
+B) ro'yhatdagi elementlarni chaqiradi
+C) lug'atdagi yo'q element o'rniga xatolik matnini chiqaradi       
+D) lug'atdagi elementlarni qiymatini chaqiradi
 
 16) Foydalanuvchi kiritgan sonlardan faqat musbatlarini 3 va 4 chi darajasini qaytaruvchi dastur tuzing.
     Agar foydalanuvchi manfiy yoki 0 kiritsa dastur ishlashda davom etsin. 'exit', 'quuit' deb yozgandagina
@@ -158,20 +149,18 @@ taomlar = {
 
 """
 
-
-
 # 16)
-while True:
-    son = input("Biror son kiriting: ")
-    if son.lower() == 'exit' or son.lower() == 'quit':
-        print("Dastur tugadi!")
-        break
-    elif son.isdigit() and int(son) > 0:
-        print(f"Siz kiritgan {int(son)} sonining 3-darajasi {int(son)**3} ga va 4-darajasi {int(son)**4} ga teng")
-    elif  son.isdigit() and int(son) <= 0:
-        continue
-    else:
-        print("Iltimos musbat son kiriting !!!")
+# while True:
+#     son = input("Biror son kiriting: ")
+#     if son.lower() == 'exit' or son.lower() == 'quit':
+#         print("Dastur tugadi!")
+#         break
+#     elif son.isdigit() and int(son) > 0:
+#         print(f"Siz kiritgan {int(son)} sonining 3-darajasi {int(son)**3} ga va 4-darajasi {int(son)**4} ga teng")
+#     elif  son.isdigit() and int(son) <= 0:
+#         continue
+#     else:
+#         print("Iltimos musbat son kiriting !!!")
         
 # 17)
 # insonlar = {

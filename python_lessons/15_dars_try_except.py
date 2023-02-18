@@ -209,3 +209,6 @@ turini chiqaring.
     Ushbu kodda yuzaga kelishi mumkin bo'lgan hatoliklarni 'try-except' yordamida oldini oling
 
 """
+
+
+

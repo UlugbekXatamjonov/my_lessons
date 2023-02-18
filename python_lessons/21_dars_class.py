@@ -13,6 +13,8 @@ Obyektga Yo'naltirilgan Dasturlashning tamoyillaridan biri bu inkapsulyatsiya,
 
 # class Avto:
 #     """Avtomobil klassi"""
+#     num_auto = 0
+
 #     def __init__(self,make,model,rang,yil,narh,km=0):
 #         """Avtomobilning xususiyatlari"""
 #         self.make = make
@@ -22,37 +24,53 @@ Obyektga Yo'naltirilgan Dasturlashning tamoyillaridan biri bu inkapsulyatsiya,
 #         self.narh = narh
 #         self.__km = km
 #         self.__id = uuid4()
-            
+#         Avto.num_auto += 1
+        
+#     def get_km(self):
+#         return self.__km
+    
+#     def get_id(self):
+#         return self.__id
+    
+#     def add_km(self,new_km):
+#         if new_km >=0:
+#             self.__km += new_km
+#             return f"Mashinaning km {self.__km} ga o'zgartirildi"
+#         else:
+#             print("Manfiy son qo'shib bo'lmaydi")
+    
+#     def update_km(self,new_km):
+#         if new_km >=0:
+#             self.__km = new_km
+#             return f"Sizning spidokelemetiringiz {self.__km} ga o'zgardi"
+#         else:
+#             print("Manfiy son qo'shib bo'lmaydi")
+
+#     @classmethod # kalit so'zi
+#     def get_num_avto(cls):
+#         return cls.num_auto
+
 # avto1 = Avto("GM","Malibu","Qora",2020,40000,100000)
-# avto2 = Avto("GM","Lacetti","Oq",2020,20000)
+# avto2 = Avto("GM","Malibu","Qora",2020,40000,100000)
+# avto3 = Avto("GM","Lacetti","Oq",2020,20000)
+# avto4 = Avto("GM","Lacetti","Oq",2020,20000)
 
 # print(avto1.model)
+# print(avto1.get_km())
+# print(avto1.get_id())
 
-"""
-def get_km(self):
-        return self.__km
-    
-def get_id(self):
-    return self.__id
-"""
-# print(avto1.__km)
+
+# print(avto1.get_km())
+# print(avto1.add_km(5000))
+# print(avto1.update_km(200))
 # print(avto1.get_km())
 
-
-"""
-    # def add_km(self,km):
-    #     if km>=0:
-    #         self.__km += km
-    #     else:
-    #         print("Mashina km kamaytirib bo'lmaydi")
-"""
-# avto1.add_km(1500)
-# print(avto1.get_km())
-
+# print(avto1.get_num_avto())
+# print(avto2.get_num_avto())
 
 """
 Avvalgi darslarimizda biror klassdan yaratilgan har bir obyektning xususiyatlarini klass 
-    ichidagidef __init__() medoti yordamida berayotgan edik. Bu metod qanday ishlaydi? 
+    ichidagi def __init__() medoti yordamida berayotgan edik. Bu metod qanday ishlaydi? 
     Biz har gal klassga murojat qilganimizda klass aynan shu __init__metodini ishga tushiradi va 
     biz bergan xususiyatlar bilan yangi obyekt yaratadi.
     Pythonda xususiyatlarni nafaqat obyektga balki to'g'ridan-to'g'ri klassga ham yuklash 
@@ -76,12 +94,6 @@ num_avto = 0
     Klassga oid metodlar @classmethod dekoratori bilan boshlanadi va obyektga oid 
     metodlardan farqli ravishda self emas cls (class) argumentini qabul qiladi.
 """
-
-"""
-@classmethod
-    def get_num_avto(cls):
-        return cls.__num_avto
-"""
 # print(Avto.get_num_avto())
 
 
@@ -91,9 +103,7 @@ Vazifa:
     Shu class lar uchun ularning hususiyat  ko'ruvchi va o'zgartiruvchi metodlar yozing.
     Har ikkala classlar uchun yopiq xususiyatlar qo'shing va ularning qiymatini ko'rsatuvchi 
     va o'zgartiruvchi metodlar yozing.
+    Va classlar uchun metodlar ham yozing. Kamida 1 ta 
     
 """
-
-
-
 

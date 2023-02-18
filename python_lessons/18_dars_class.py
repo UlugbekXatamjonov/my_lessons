@@ -2,95 +2,79 @@
 Thame: Classlar bilan ishlash
 """
 """ Classlarga argument sifatida turli ma'lumot turlarini uzatish """
-# class Student:
-#     """ O'quvchi classi """
-#     def __init__(self, full_name, year, marks, friends):
-#         """ Student haqidagi malumotlarni o'zida saqlovchi funksiya """
-#         self.full_name = full_name
-#         self.year = year
-#         self.marks = marks
-#         self.friends = friends
-        
-#     def get_name(self):
-#         return self.full_name
-    
-#     def get_info(self):
-#         return f"{self.full_name}ning yoshi {self.year}"
-        
-#     def get_marks(self):
-#         print(f"{self.full_name}ning baxolari:")
-#         for key, value in self.marks.items():
-#             print(f"{key.capitalize()} dan {value}")   
-    
-#     def get_friends(self):
-#         print(f"{self.full_name}ning do'stlari:")
-#         for ism in  self.friends:
-#             print(f"{ism}", end = " ")
-        
-        
-# baxolar = {
-#     'matematika':3, 
-#     "ingliz_tili":5, 
-#     "ona_tili":5, 
-#     "geografiya":4
-# }
-# friends = ['Ali', "Olim", "Hasan", "Husan", "Vali"]
+class Student:
+    """ O'quvchi classi """
+    def __init__(self, FULL_NAME, YEAR, MARKS,FRIENDS, FACULTY,LEVEL=1,):
+        """ Student haqidagi malumotlarni o'zida saqlovchi funksiya """
+        self.full_name = FULL_NAME
+        self.year = YEAR
+        self.marks = MARKS
+        self.friends = FRIENDS
+        self.faculty = FACULTY
+        self.level = LEVEL
 
+    def get_name(self):
+        return self.full_name
+    
+    def get_info(self):
+        return f"{self.full_name} {self.year} yoshda. Va u {self.level} - bosqich talabasi "
+    
+    def get_marks(self):
+        text = f"\t{self.full_name}ning olgan baholari:\n"
+        for fan, baho in self.marks.items():
+            text += f"{fan} - {baho}\n"
+        return text
+    
+    def get_friends(self):
+        text = f"{self.full_name}ning ulfatlari:\n"
+        for i in self.friends:
+            text += f"{i}  "
+        return text
+    
+    def set_level(self, new_level):
+        self.level = new_level
+        return self.level
+    
+    def update_level(self):
+        if self.level < 4:
+            self.level += 1
+        else:
+            return "5 - bosqich mavjud emas !!!"
+        return self.level
+    
+    def get_faculty(self):
+        return f"{self.full_name} {self.faculty}  fakulteti talabasi"
+    
+    def set_faculty(self, new_faculty):
+        self.faculty = new_faculty
+        return self.faculty
 
-# student1 = Student("Boburov", 1999, baxolar, friends)
-# student2 = Student("Nodira Jamilova", 2002, {'matematika':5, 
+baxolar = {
+    'matematika':3, 
+    "ingliz_tili":5, 
+    "ona_tili":5, 
+    "geografiya":4
+}
+friends = ['Ali', "Olim", "Hasan", "Husan", "Vali"]
+
+student1 = Student("Aziz Alimov",23,baxolar, friends, 'Matematika', 4)
+# student2 = Student("Olimjon", 43,baxolar, friends)
+# student3 = Student("Boburov", 1999, baxolar, friends)
+# student4 = Student("Nodira Jamilova", 2002, {'matematika':5, 
 #                                             "ingliz_tili":4, 
 #                                             "ona_tili":3, 
 #                                             "geografiya":5
 #                                         }, ['Guli', "Aziza", "Husnora", "Madina", "Barno"])
+# print(student1.get_marks())
+# print(student1.get_friends())
 
-# print(student2.get_name())
-# print(student2.get_info())
-
-# print(student2.get_marks())
-# print(student2.get_friends())
-
-
-""" Classlarga standart qiymat berish  """
-# class Student:
-#     """ O'quvchi classi """
-#     def __init__(self, full_name, age, level, fan="Ingliz tili"):
-#         """ Student haqidagi malumotlarni o'zida saqlovchi funksiya """
-#         self.full_name = full_name
-#         self.age = age
-#         self.level = level
-#         self.fan = fan
-
-#     def get_info(self):
-#         return f"{self.full_name} {self.age} yoshda va {self.level}-bosqich talabasi. Yo'nalishi {self.fan}"
-
-#     def set_level(self):
-#         self.level  = self.level + 1
-#         return self.level
-    
-#     def set_age(self):
-#         self.age = self.age + 1
-#         return self.age
-    
-#     def set_fan(self, yangi_fan):
-#         self.fan = yangi_fan
-#         return f"{self.full_name}ning yo'nalishi {self.fan} ga o'zgartirildi."
-    
-
-# student1 = Student("Asadbek Olimov", 24, 1, "Matemetika")
-# student2 = Student("Guli Azimova", 22, 3)
-
+# print(student1.set_level(3))
 # print(student1.get_info())
-# print(student2.get_info())
 
-# print(student1.set_age(), student1.set_level())
-# print(student2.set_age(), student2.set_level())
+print(student1.get_faculty())
+print(student1.set_faculty('Iqtisot'))
+print(student1.get_faculty())
 
-# print(student1.set_fan("Geometriya"))
-# print(student2.set_fan("Rust tili"))
-
-# print(student1.get_info())
-# print(student2.get_info())
 
 
 """ 

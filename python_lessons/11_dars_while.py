@@ -19,7 +19,7 @@ Thame: While tsikli
 #     if x%2==0:
 #         s = s+x 
 #         print(x)   
-#     x = x+1
+#     x = x+11
 # print(s)
 
 """ 3 """
@@ -93,12 +93,12 @@ Thame: While tsikli
 
 
 """ while va else """
-x = 0
-while x < 3:
-    print(f"{x+1}-print")
-    x = x + 1
-else:
-    print('end print')
+# x = 0
+# while x < 3:
+#     print(f"{x+1}-print")
+#     x = x + 1
+# else:
+#     print('end print')
 
 """ while do ga misol """
 """ While - shartni tekshirib keyin kodni bajaradi
