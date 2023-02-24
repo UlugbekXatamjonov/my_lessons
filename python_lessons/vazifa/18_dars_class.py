@@ -54,7 +54,7 @@ class Avto:
         if self.km >= 100_000:
             self.narh -= 1_000
         elif self.km >= 500_000:
-            self.narh += 2_000
+            self.narh -= 2_000
 
 
 car1 = Avto("Lexux","D4","qora","avtomat",23000,2019)

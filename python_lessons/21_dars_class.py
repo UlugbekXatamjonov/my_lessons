@@ -85,7 +85,6 @@ num_avto = 0
 """
 # print(avto1.num_avto)
 
-
 """ Klassga oid xususiyatlar ham huddi yuoqridagi kabi nomidan avval 
     ikki pastki chiziq qo'shish bilan inkapsulyatsiya qilinadi
     

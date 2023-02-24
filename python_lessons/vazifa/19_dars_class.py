@@ -22,11 +22,10 @@ class Oila():
         self.persons_count += 1     
         
     def update_persons_count(self, number):
-        self.persons_count = 0 # avval qiymatni 0 qilamiz
-        self.persons_count += number # keyin yangi sonni qo'shamiz
+        self.persons_count = number # keyin yangi sonni qo'shamiz
         
     def about_persons(self):
-        return [person.get_info() for person in self.persons]
+        return [person.get_info_person() for person in self.persons]
         
 oila1  = Oila("Abdullayevlar")   
         
@@ -38,21 +37,21 @@ class Person():
         self.job = job
         self.country = country
             
-    def get_info(self):
+    def get_info_person(self):
         return f"{self.full_name} {self.country}da yashaydi. Hozirda {self.age} da, kasbi {self.job}."
         
 person1 = Person("Abdullayev Aboos", 34, "Mehanik", "O'zbekiston")
 person2 = Person("Abdullayeva Nargiza", 30, "Hamshira", "O'zbekiston")    
         
         
-# oila1.add_person(person1)
-# oila1.add_person(person2)
+oila1.add_person(person1)
+oila1.add_person(person2)
 # print(oila1.get_info())
 
-# oila1.update_persons_count(5) # oiladagi azolar sonini o'zgartiramiz
-# print(oila1.get_info())
+oila1.update_persons_count(5) # oiladagi azolar sonini o'zgartiramiz
+print(oila1.get_info())
       
-# print(oila1.about_persons())  
+print(oila1.about_persons())  
         
         
         
